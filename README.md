@@ -7,7 +7,7 @@ Note: the image should handle any domain, example.com is used in this documentat
 ## Usage
 
 ```
-docker run --rm ghcr.io/shipmight/nginx-www-redirect
+docker run --rm -p 8080:80 ghcr.io/shipmight/nginx-www-redirect
 ```
 
 See [GitHub packages](https://github.com/shipmight/nginx-www-redirect/pkgs/container/nginx-www-redirect) for available tags.
@@ -32,7 +32,9 @@ This image runs with as low as 10MB of memory and some CPU cycles.
 
 The image size is ~24MB. It is based on nginx-alpine.
 
-## Testing locally
+## Contributing
+
+### Testing locally
 
 Build the image:
 
@@ -56,6 +58,16 @@ $ curl -v -H 'Host: www.example.com' http://127.0.0.1:8080
 ```
 
 For automation purposes there's a script `bash test.sh`, which is used in the CI.
+
+### Release process
+
+Push a new tag to trigger the release-workflow which builds and pushes new image to ghcr.
+
+```bash
+git pull
+git tag v1.0.0
+git push origin v1.0.0
+```
 
 ## For Shipmight users
 
