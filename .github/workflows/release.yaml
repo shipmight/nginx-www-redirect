@@ -1,0 +1,16 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/v}" >> $GITHUB_ENV
+      - run: docker build -t ghcr.io/shipmight/nginx-www-redirect:${{ env.RELEASE_VERSION }} .
+      - run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u codeclown --password-stdin
+      - run: docker push ghcr.io/shipmight/nginx-www-redirect:${{ env.RELEASE_VERSION }}
