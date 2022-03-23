@@ -28,7 +28,7 @@ If you need to redirect visitors from a www-domain to the non-www equivalent, an
 
 ## Requirements
 
-This image runs with as low as 10MB of memory and some CPU cycles.
+This image is proven to run fine with as low as 128MB of memory (probably way less) and some CPU cycles.
 
 The image size is ~24MB. It is based on nginx-alpine.
 
