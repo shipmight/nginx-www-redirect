@@ -4,6 +4,14 @@ Very simple Docker image, which performs a request from www to non-www domain.
 
 Note: the image should handle any domain, example.com is used in this documentation as an example.
 
+## Usage
+
+```
+docker run --rm ghcr.io/shipmight/nginx-www-redirect
+```
+
+See [GitHub packages](https://github.com/shipmight/nginx-www-redirect/pkgs/container/nginx-www-redirect) for available tags.
+
 ## How it works
 
 Any request with the header `Host` header beginning with `www.` returns a 301 redirect to the non-www domain.
@@ -21,6 +29,8 @@ If you need to redirect visitors from a www-domain to the non-www equivalent, an
 ## Requirements
 
 This image runs with as low as 10MB of memory and some CPU cycles.
+
+The image size is ~24MB. It is based on nginx-alpine.
 
 ## Testing locally
 
