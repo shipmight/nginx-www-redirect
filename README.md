@@ -1,8 +1,8 @@
 # nginx-www-redirect
 
-A very simple Docker image, which simply redirects a www.example.com request to example.com.
+Very simple Docker image, which performs a request from www to non-www domain.
 
-Note: the image handles any domain, example.com is used in this documentation as an example.
+Note: the image should handle any domain, example.com is used in this documentation as an example.
 
 ## How it works
 
