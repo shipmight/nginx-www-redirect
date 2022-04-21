@@ -1,8 +1,20 @@
 # nginx-www-redirect
 
-Very simple Docker image, which performs a request from www to non-www domain.
+Very simple Docker image, which redirects a request from www to non-www domain.
 
-Note: the image should handle any domain, example.com is used in this documentation as an example.
+Note: the image should be able to handle any domain. "example.com" is used in this documentation as an example.
+
+Contents:
+
+- [Usage](#usage)
+- [How it works](#how-it-works)
+- [Why](#why)
+- [Requirements](#requirements)
+- [Contributing](#contributing)
+- [Testing locally](#testing-locally)
+- [Release process](#release-process)
+- [For Shipmight users](#for-shipmight-users)
+- [License](#license)
 
 ## Usage
 
@@ -72,3 +84,7 @@ git push origin v1.0.0
 ## For Shipmight users
 
 Note: domain redirects (including www to non-www) will be an out-of-the-box feature in Shipmight. In the meantime, you can use this image.
+
+## License
+
+Released under the Apache 2 license. See [LICENSE](./LICENSE).
