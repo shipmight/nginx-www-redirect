@@ -53,7 +53,7 @@ Make a request and observe returned headers:
 ```shell
 $ curl -v -H 'Host: www.example.com' http://127.0.0.1:8080
 < HTTP/1.1 301 Moved Permanently
-< Location: http://asd.com/
+< Location: http://example.com/
 ...
 ```
 
